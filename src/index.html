@@ -1,51 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador de Texto</title>
     <link rel="stylesheet" href="/assets/css/style.css">
-    <script src="./index.js"></script>
+    <script src="index.js" defer></script>
     <link rel="shortcut icon" href="/assets/images/cowico.png" type="image/x-icon">
-    <title>Encriptador de texto</title>
 </head>
-<body>
+<body>  
     <main>
         <section class="container">
-            <div class="input">
-                <div class="texto">
-                    <textarea name="input" 
-                    id="text-input" 
-                    cols="30" 
-                    rows="10"
-                    placeholder="Digite o texto aqui..."
-                    />
-                </div>
-                <div class="botao1">
-                    <button class="criptografar" onclick="criptografar()">
-                        Criptografar 
+            <div class="entrada">
+                <div class="digite-texto">
+                    <textarea name="text-input" id="text-input" cols="30" rows="13" placeholder="Digite seu texto..."></textarea>
+                </div>              
+                <div class="botoes">
+                    <button class="cripto" onclick="botaoCriptografar()">
+                        Criptografar
                     </button>
-                    <button type="button" onclick="descriptografar()">
+                    <button class="descripto" onclick="botaoDescriptografar()">
                         Descriptografar
                     </button>
                 </div>
             </div>
-
             <div class="saida">
-                <div class="conteudo-vazio">
+                <div class="conteudo-resultado-vazio">
                     <h2 id="h2-resultado">
-                        Não há nada encontrado aqui
+                        Nenhuma mensagem encontrada
                     </h2>
                     <p id="p-resultado">
-                        Digite algo que deseja criptografar ou descriptografar
+                        Digite um texto que você deseja criptografar ou descriptografar.
                     </p>
                 </div>
-                <div class="conteudo-ok">
-                    <textarea 
-                    id="output" 
-                    cols="30" 
-                    rows="10">
-                    />
-                    <button class="copy" onclick="copytxt()">Copiar texto</button>
+                <div class="conteudo-resultado-ok">
+                    <textarea id="text-output" cols="30" rows="20"></textarea>
+                    <button class="copiar" onclick="copiarTexto()">Copiar texto</button>
                 </div>
             </div>
         </section>

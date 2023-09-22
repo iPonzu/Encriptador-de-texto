@@ -1,51 +1,62 @@
-header{
+header {
     margin-bottom: 30px;
 }
-body{
-    background-image: url(../img/cow.jpg);
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+.logo-alura {
+    padding: 3px 0;
 }
-
-.container{
+body {
+    background-image: url(../images/cow.jpg);
+    font-family: 'Inter', sans-serif;
+}
+.container {
     display: flex;
     width: 1200px;
     margin: 0 auto;
     justify-content: space-between;
     background-color: #fff;
 }
-.input{
-    width: 55%;   
+.entrada {
+    width: 55%;
 }
-.text-input textarea{
+.digite-texto {
+    width: 100%;
+}
+.digite-texto textarea {
     border: none;
     background: none;
     width: 100%;
     font-size: 28px;
+    color: #0A3871;
+    resize: none;
+    margin-bottom: 10px;
 }
-.text-input textarea:focus{
-    outline: none;
+.digite-texto textarea:focus {
     border: 0 none;
+    outline: 0;
 }
-::placeholder{
-    color: #0a3871;
+::placeholder {
+    color: #0A3871;
 }
-.resultado-vazio{
+.saida {
+    width: 40%;
+}
+.conteudo-resultado-vazio {
     background: #fefefe;
     text-align: center;
     width: 80%;
     padding: 93px 20px;
     border-radius: 20px;
-    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);   
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
 }
-.resultado-ok{
+.conteudo-resultado-ok {
     text-align: center;
-    width: 80%;
     background: #fefefe;
+    width: 80%;
     padding: 10px 20px;
     border-radius: 20px;
     box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
 }
-.conteudo-ok textarea {
+.conteudo-resultado-ok textarea {
     border: none;
     background: none;
     width: 100%;
@@ -54,11 +65,10 @@ body{
     resize: none;
     margin-bottom: 10px;
 }
-.conteudo-ok textarea:focus{
-    outline: none;
-    border: 0 none;
+.conteudo-resultado-ok textarea:focus {
+    outline: 0;
 }
-.criptografar, .descriptografar, .copy{
+.cripto, .descripto, .copiar {
     padding: 15px;
     width: 200px;
     border-radius: 24px;
@@ -66,4 +76,50 @@ body{
     font-weight: bold;
     cursor: pointer;
     margin-right: 10px;
+}
+.cripto, .copiar {
+    background: #0A3871;
+    color: white;
+}
+.cripto:hover, .descripto:hover, .copiar:hover {
+    transform: scale(1.1);
+}
+.descripto {
+    background: #D8DFE8;
+    color: #0A3871;
+}
+@media screen and (min-width: 481px) and (max-width: 1199px) {
+    .container, .entrada, .saida {
+        width: auto;
+    }
+    .container {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    .cripto, .descripto {
+        margin: 5px 0;
+        width: auto;
+    }
+    .digite-texto textarea {
+        height: 250px;
+    }
+    .cripto:hover, .descripto:hover, .copiar:hover {
+        transform: scale(1.0);
+    }
+    #img {
+        display: none;
+    }
+    .conteudo-resultado-vazio {
+        margin-top: 10px;
+        padding: 30px 0px;
+        width: auto;
+    }
+    .conteudo-resultado-ok {
+        margin-top: 10px;
+        width: auto;
+    }
+    .conteudo-resultado-ok textarea {
+        height: 100px;
+    }
 }
